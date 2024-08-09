@@ -44,3 +44,52 @@ function between(a, b) {
   const quarterOf = (month) => {
     return Math.ceil(month/3)
    }
+
+   function findMultiples(int, limit) {
+
+    let arr = [];
+    
+      for (let i=int; i<=limit; i+=int){
+        arr.push(i)
+      }
+  
+    return arr
+    
+  }
+
+  const grow = (x) => x.reduce((acc, cv)=> acc * cv)
+
+  var replaceDots = function(str) {
+    let cut = str.split('');
+    return cut.map(a => a.replace('.','-')).join('')
+  
+  }
+//   replaceDots("one.two.three")
+
+const arr = N => {
+
+    let i = -1;
+    let arr = [];
+  
+    while(i<N-1){
+      i++
+      arr.push(i)
+    }
+  
+   return arr
+  }
+
+  function shorter_reverse_longer(a, b) {
+
+    return (a.length >= b.length) ?
+      `${b}${a.split('').reverse().join('')}${b}`
+      :
+      `${a}${b.split('').reverse().join('')}${a}`
+  }
+
+
+  function sixToast(num) {
+    return (num >= 6)? num-6: num;
+  }
+
+  
