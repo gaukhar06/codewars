@@ -493,3 +493,59 @@ function reverseWords(str){
 function getAge(age){
 	return parseInt(age[0]);
 }
+
+class Kata {
+	static getVolumeOfCuboid(length, width, height) {
+		return(length * width * height);
+	}
+}
+
+function greet(name){
+	if(name === "Johnny"){
+		return "Hello, my love!";
+	} else {
+		return "Hello, " + name + "!";
+	}
+}
+
+function stringToArray(string){
+	return string.split(' ');
+}
+
+function reverseSeq(n){
+	var arr = [];
+	for (let i = n; i > 0; i--){
+		arr.push(i);
+	}
+	return arr;
+}
+
+var min = function(list){
+    return Math.min(...list);
+}
+
+var max = function(list){
+    return Math.max(...list);
+}
+
+function bmi(weight, height) {
+	var bmi = weight / height**2;
+	if (bmi <= 18.5){
+		return "Underweight";
+	} else if (bmi <= 25.0){
+		return "Normal";
+	} else if (bmi <= 30.0){
+		return "Overweight";
+	} else {
+		return "Obese";
+	}
+}
+
+function makeUpperCase(str) {
+	return str.toUpperCase();
+}
+
+function past(h, m, s){
+	return (h * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000);
+}
+
