@@ -368,3 +368,98 @@ function gooseFilter (birds) {
 	var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
 	return birds.filter(i => !geese.includes(i));
 };
+
+function getChar(c){
+	return String.fromCharCode(c);
+}
+
+function twoSort(array) {
+	var arr = array.sort();
+	return arr[0].split("").join("***");
+}
+
+var a = "code";
+var b = "wa.rs";
+var name = a + b;
+
+var laLigaGoals = 43;
+var championsLeagueGoals = 10;
+var copaDelReyGoals = 5;
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
+
+function reverseList(l){
+	return l.reverse((a, b) => b - a);
+}
+
+function greet(language) {
+	var welcome = {'english': 'Welcome',
+				   'czech': 'Vitejte', 
+				   'danish': 'Velkomst',
+				   'dutch': 'Welkom',
+				   'estonian': 'Tere tulemast',
+				   'finnish': 'Tervetuloa',
+				   'flemish': 'Welgekomen',
+				   'french': 'Bienvenue',
+				   'german': 'Willkommen',
+				   'irish': 'Failte',
+				   'italian': 'Benvenuto',
+				   'latvian': 'Gaidits',
+				   'lithuanian': 'Laukiamas',
+				   'polish': 'Witamy',
+				   'spanish': 'Bienvenido',
+				   'swedish': 'Valkommen',
+				   'welsh': 'Croeso',
+				};
+	return welcome[language] || 'Welcome';
+}
+
+function expressionMatter(a, b, c) {
+	var combinations = [
+		a + b + c,
+		a * (b + c), 
+		a * b * c, 
+		(a + b) * c,
+		a * b + c,
+	];
+	return Math.max.apply(null, combinations);
+}
+
+var humanYearsCatYearsDogYears = function(humanYears) {
+	let catYears1 = 15;
+	let catYears2 = catYears1 + 9;
+	let catYears3 = catYears2 + (humanYears - 2) * 4;
+	let dogYears1 = 15;
+	let dogYears2 = dogYears1 + 9;
+	let dogYears3 = dogYears2 + (humanYears - 2) * 5;
+	if (humanYears == 0){
+		return [0, 0, 0];
+	}
+	if (humanYears == 1){
+		return [humanYears, catYears1, dogYears1];
+	}
+	if (humanYears == 2){
+		return [humanYears, catYears2, dogYears2];
+	}
+	if (humanYears > 2){
+		return [humanYears, catYears3, dogYears3];
+	}
+}
+
+function correct(string){
+	return string.replace(/5/g,"S").replace(/0/g,"O").replace(/1/g,"I");
+}
+
+function getPlanetName(id){
+	switch(id){
+		case (1): return ('Mercury');
+		case (2) : return ('Venus');
+		case (3) : return ('Earth');
+		case (4) : return ('Mars');
+		case (5) : return ('Jupiter');
+		case (6) : return ('Saturn');
+		case (7) : return ('Uranus');
+		case (8) : return ('Neptune');
+	}
+};
+
