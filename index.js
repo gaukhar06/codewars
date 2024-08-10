@@ -275,3 +275,33 @@ function vowelOne(str) {
             ? 1 : 0).join("")
 
 }
+
+
+function min(arr, toReturn) {
+	return (toReturn === 'value')? Math.min(...arr) : arr.indexOf(Math.min(...arr))
+}
+
+function removeUrlAnchor(url){
+  
+    let first = url.split('').includes('#')
+    let num = url.split('').indexOf('#')
+    let sen = url.split('').slice(0,num).join('')
+    
+    return (!first) ? url : sen
+  }
+
+
+  function switcheroo(x){
+    return x.split('').map(a => (a == 'a')? a.replace('a','b'):a.replace('b','a')).join('')
+  }
+
+
+  function digits(n) {
+    return n.toString().split('').length
+  }
+
+  const last = xs =>  (xs.length)? xs.pop(): null
+
+  function summy(nums){
+    return nums.split(' ').map(a => parseInt(a)).reduce((a,b)=> a+b)
+  }
