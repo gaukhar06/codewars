@@ -463,3 +463,33 @@ function getPlanetName(id){
 	}
 };
 
+function strCount(str, letter){  
+	return str.split(letter).length - 1;
+}
+
+function square(n){
+	return n*n;
+}
+
+function switchItUp(number){
+	var words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+	return words[number];
+}
+
+function hoopCount (n) {
+	let hope = "Keep at it until you get it";
+	let hoop = "Great, now move on to tricks";
+	if (n < 10){
+		return hope;
+	} else {
+		return hoop;
+	}
+}
+
+function reverseWords(str){
+	return str.split(" ").reverse().join(" ");
+}
+
+function getAge(age){
+	return parseInt(age[0]);
+}
