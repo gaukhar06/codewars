@@ -364,18 +364,18 @@ function nameShuffler(name) {
 }
 
 
-function gooseFilter (birds) {
-	var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
-	return birds.filter(i => !geese.includes(i));
+function gooseFilter(birds) {
+    var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+    return birds.filter(i => !geese.includes(i));
 };
 
-function getChar(c){
-	return String.fromCharCode(c);
+function getChar(c) {
+    return String.fromCharCode(c);
 }
 
 function twoSort(array) {
-	var arr = array.sort();
-	return arr[0].split("").join("***");
+    var arr = array.sort();
+    return arr[0].split("").join("***");
 }
 
 var a = "code";
@@ -388,164 +388,237 @@ var copaDelReyGoals = 5;
 
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
 
-function reverseList(l){
-	return l.reverse((a, b) => b - a);
+function reverseList(l) {
+    return l.reverse((a, b) => b - a);
 }
 
 function greet(language) {
-	var welcome = {'english': 'Welcome',
-				   'czech': 'Vitejte', 
-				   'danish': 'Velkomst',
-				   'dutch': 'Welkom',
-				   'estonian': 'Tere tulemast',
-				   'finnish': 'Tervetuloa',
-				   'flemish': 'Welgekomen',
-				   'french': 'Bienvenue',
-				   'german': 'Willkommen',
-				   'irish': 'Failte',
-				   'italian': 'Benvenuto',
-				   'latvian': 'Gaidits',
-				   'lithuanian': 'Laukiamas',
-				   'polish': 'Witamy',
-				   'spanish': 'Bienvenido',
-				   'swedish': 'Valkommen',
-				   'welsh': 'Croeso',
-				};
-	return welcome[language] || 'Welcome';
+    var welcome = {
+        'english': 'Welcome',
+        'czech': 'Vitejte',
+        'danish': 'Velkomst',
+        'dutch': 'Welkom',
+        'estonian': 'Tere tulemast',
+        'finnish': 'Tervetuloa',
+        'flemish': 'Welgekomen',
+        'french': 'Bienvenue',
+        'german': 'Willkommen',
+        'irish': 'Failte',
+        'italian': 'Benvenuto',
+        'latvian': 'Gaidits',
+        'lithuanian': 'Laukiamas',
+        'polish': 'Witamy',
+        'spanish': 'Bienvenido',
+        'swedish': 'Valkommen',
+        'welsh': 'Croeso',
+    };
+    return welcome[language] || 'Welcome';
 }
 
 function expressionMatter(a, b, c) {
-	var combinations = [
-		a + b + c,
-		a * (b + c), 
-		a * b * c, 
-		(a + b) * c,
-		a * b + c,
-	];
-	return Math.max.apply(null, combinations);
+    var combinations = [
+        a + b + c,
+        a * (b + c),
+        a * b * c,
+        (a + b) * c,
+        a * b + c,
+    ];
+    return Math.max.apply(null, combinations);
 }
 
-var humanYearsCatYearsDogYears = function(humanYears) {
-	let catYears1 = 15;
-	let catYears2 = catYears1 + 9;
-	let catYears3 = catYears2 + (humanYears - 2) * 4;
-	let dogYears1 = 15;
-	let dogYears2 = dogYears1 + 9;
-	let dogYears3 = dogYears2 + (humanYears - 2) * 5;
-	if (humanYears == 0){
-		return [0, 0, 0];
-	}
-	if (humanYears == 1){
-		return [humanYears, catYears1, dogYears1];
-	}
-	if (humanYears == 2){
-		return [humanYears, catYears2, dogYears2];
-	}
-	if (humanYears > 2){
-		return [humanYears, catYears3, dogYears3];
-	}
+var humanYearsCatYearsDogYears = function (humanYears) {
+    let catYears1 = 15;
+    let catYears2 = catYears1 + 9;
+    let catYears3 = catYears2 + (humanYears - 2) * 4;
+    let dogYears1 = 15;
+    let dogYears2 = dogYears1 + 9;
+    let dogYears3 = dogYears2 + (humanYears - 2) * 5;
+    if (humanYears == 0) {
+        return [0, 0, 0];
+    }
+    if (humanYears == 1) {
+        return [humanYears, catYears1, dogYears1];
+    }
+    if (humanYears == 2) {
+        return [humanYears, catYears2, dogYears2];
+    }
+    if (humanYears > 2) {
+        return [humanYears, catYears3, dogYears3];
+    }
 }
 
-function correct(string){
-	return string.replace(/5/g,"S").replace(/0/g,"O").replace(/1/g,"I");
+function correct(string) {
+    return string.replace(/5/g, "S").replace(/0/g, "O").replace(/1/g, "I");
 }
 
-function getPlanetName(id){
-	switch(id){
-		case (1): return ('Mercury');
-		case (2) : return ('Venus');
-		case (3) : return ('Earth');
-		case (4) : return ('Mars');
-		case (5) : return ('Jupiter');
-		case (6) : return ('Saturn');
-		case (7) : return ('Uranus');
-		case (8) : return ('Neptune');
-	}
+function getPlanetName(id) {
+    switch (id) {
+        case (1): return ('Mercury');
+        case (2): return ('Venus');
+        case (3): return ('Earth');
+        case (4): return ('Mars');
+        case (5): return ('Jupiter');
+        case (6): return ('Saturn');
+        case (7): return ('Uranus');
+        case (8): return ('Neptune');
+    }
 };
 
-function strCount(str, letter){  
-	return str.split(letter).length - 1;
+function strCount(str, letter) {
+    return str.split(letter).length - 1;
 }
 
-function square(n){
-	return n*n;
+function square(n) {
+    return n * n;
 }
 
-function switchItUp(number){
-	var words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-	return words[number];
+function switchItUp(number) {
+    var words = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+    return words[number];
 }
 
-function hoopCount (n) {
-	let hope = "Keep at it until you get it";
-	let hoop = "Great, now move on to tricks";
-	if (n < 10){
-		return hope;
-	} else {
-		return hoop;
-	}
+function hoopCount(n) {
+    let hope = "Keep at it until you get it";
+    let hoop = "Great, now move on to tricks";
+    if (n < 10) {
+        return hope;
+    } else {
+        return hoop;
+    }
 }
 
-function reverseWords(str){
-	return str.split(" ").reverse().join(" ");
+function reverseWords(str) {
+    return str.split(" ").reverse().join(" ");
 }
 
-function getAge(age){
-	return parseInt(age[0]);
+function getAge(age) {
+    return parseInt(age[0]);
 }
 
 class Kata {
-	static getVolumeOfCuboid(length, width, height) {
-		return(length * width * height);
-	}
+    static getVolumeOfCuboid(length, width, height) {
+        return (length * width * height);
+    }
 }
 
-function greet(name){
-	if(name === "Johnny"){
-		return "Hello, my love!";
-	} else {
-		return "Hello, " + name + "!";
-	}
+function greet(name) {
+    if (name === "Johnny") {
+        return "Hello, my love!";
+    } else {
+        return "Hello, " + name + "!";
+    }
 }
 
-function stringToArray(string){
-	return string.split(' ');
+function stringToArray(string) {
+    return string.split(' ');
 }
 
-function reverseSeq(n){
-	var arr = [];
-	for (let i = n; i > 0; i--){
-		arr.push(i);
-	}
-	return arr;
+function reverseSeq(n) {
+    var arr = [];
+    for (let i = n; i > 0; i--) {
+        arr.push(i);
+    }
+    return arr;
 }
 
-var min = function(list){
+var min = function (list) {
     return Math.min(...list);
 }
 
-var max = function(list){
+var max = function (list) {
     return Math.max(...list);
 }
 
 function bmi(weight, height) {
-	var bmi = weight / height**2;
-	if (bmi <= 18.5){
-		return "Underweight";
-	} else if (bmi <= 25.0){
-		return "Normal";
-	} else if (bmi <= 30.0){
-		return "Overweight";
-	} else {
-		return "Obese";
-	}
+    var bmi = weight / height ** 2;
+    if (bmi <= 18.5) {
+        return "Underweight";
+    } else if (bmi <= 25.0) {
+        return "Normal";
+    } else if (bmi <= 30.0) {
+        return "Overweight";
+    } else {
+        return "Obese";
+    }
 }
 
 function makeUpperCase(str) {
-	return str.toUpperCase();
+    return str.toUpperCase();
 }
 
-function past(h, m, s){
-	return (h * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000);
+function past(h, m, s) {
+    return (h * 60 * 60 * 1000) + (m * 60 * 1000) + (s * 1000);
+}
+
+function lovefunc(flower1, flower2) {
+    return (flower1 + flower2) % 2 != 0;
+}
+
+function sum(numbers) {
+    var sum_a = 0;
+    for (var n = 0; n < numbers.length; n++) {
+        sum_a += numbers[n]
+    }
+    return sum_a;
+};
+
+
+function digitize(n) {
+    var arr = n.toString().split('').reverse().map(Number);
+    return arr;
+}
+
+function litres(time) {
+    return parseInt(time * 0.5);
+}
+
+function evenOrOdd(str) {
+
+
+    let arr = str.split('')
+
+    let even = arr.filter(a => a % 2 == 0)
+    let odd = arr.filter(a => a % 2 > 0)
+
+    let oddSum = odd.map(a => Number(a)).reduce((a, b) => a + b)
+
+    let evenSum = even.map(a => Number(a)).reduce((a, b) => a + b)
+
+    return (oddSum == evenSum) ? 'Even and Odd are the same' : (oddSum > evenSum) ? 'Odd is greater than Even' : 'Even is greater than Odd'
+
+}
+
+function evenChars(str) {
+
+    return (str.length < 2 || str.length > 100) ? "invalid string"
+
+        : str.split('').filter((a, b) => b % 2)
+}
+
+function reverse(str) {
+
+    let wordCount = str.split(' ')
+
+    let challenge = wordCount.map((a, i) => (i % 2 == 0) ? a : a.split('').reverse().join('')).join(' ')
+
+    return (str == false) ? '' : challenge
+
+}
+
+function narcissistic(value) {
+
+
+    let arr = [];
+    arr.push(value)
+
+    let str = arr.toString()
+    let length = str.length
+    let numSpl = value.toString().split('')
+
+
+    let narcNum = numSpl.map((a) => Math.pow(a, length)).reduce((a, b) => a + b)
+
+    return (narcNum == value) ? true : false
+
 }
 
