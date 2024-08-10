@@ -278,30 +278,93 @@ function vowelOne(str) {
 
 
 function min(arr, toReturn) {
-	return (toReturn === 'value')? Math.min(...arr) : arr.indexOf(Math.min(...arr))
+    return (toReturn === 'value') ? Math.min(...arr) : arr.indexOf(Math.min(...arr))
 }
 
-function removeUrlAnchor(url){
-  
+function removeUrlAnchor(url) {
+
     let first = url.split('').includes('#')
     let num = url.split('').indexOf('#')
-    let sen = url.split('').slice(0,num).join('')
-    
+    let sen = url.split('').slice(0, num).join('')
+
     return (!first) ? url : sen
-  }
+}
 
 
-  function switcheroo(x){
-    return x.split('').map(a => (a == 'a')? a.replace('a','b'):a.replace('b','a')).join('')
-  }
+function switcheroo(x) {
+    return x.split('').map(a => (a == 'a') ? a.replace('a', 'b') : a.replace('b', 'a')).join('')
+}
 
 
-  function digits(n) {
+function digits(n) {
     return n.toString().split('').length
-  }
+}
 
-  const last = xs =>  (xs.length)? xs.pop(): null
+const last = xs => (xs.length) ? xs.pop() : null
 
-  function summy(nums){
-    return nums.split(' ').map(a => parseInt(a)).reduce((a,b)=> a+b)
-  }
+function summy(nums) {
+    return nums.split(' ').map(a => parseInt(a)).reduce((a, b) => a + b)
+}
+
+function reverseList(arr) {
+    if (!arr.length) {
+        return []
+    } else {
+
+        let get = arr.toString().split(',').reverse().join().split(',')
+        return get.map(a => parseInt(a))
+    }
+}
+
+
+var isAnagram = function (test, original) {
+
+    const testS = test.split('').sort((a, b) => a.localeCompare(b)).join('').toLowerCase()
+
+    const originalS = original.split('').sort((a, b) => a.localeCompare(b)).join('').toLowerCase()
+
+    return (testS == originalS) ? true : false
+};
+
+function moveTen(s) {
+    return s.split('').map((a) => a.charCodeAt()).map((a) => (a + 10 <= 122) ? a + 10 : a + 9 - 25).map(a => String.fromCharCode(a)).join('')
+}
+
+
+function fizzbuzz(n) {
+
+    let arr = []
+
+    for (var i = 1; i <= n; i++) {
+        if (i % 15 == 0) {
+            arr.push('FizzBuzz')
+        } else if (i % 3 == 0) {
+            arr.push('Fizz')
+        } else if (i % 5 == 0) {
+            arr.push('Buzz')
+        } else {
+            arr.push(i)
+        }
+    }
+
+    return arr
+
+}
+
+function evenChars(str) {
+
+    return (str.length < 2 || str.length > 100) ? "invalid string"
+
+        : str.split('').filter((a, b) => b % 2)
+}
+
+function nameShuffler(name) {
+    var arr = name.split(" ");
+    return arr[1] + " " + arr[0];
+}
+
+
+function gooseFilter (birds) {
+	var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+	return birds.filter(i => !geese.includes(i));
+};
